@@ -64,3 +64,7 @@ class Rectangle:
         rect_rep = "Rectangle(" + str(self.__width)
         rect_rep += ", " + str(self.__height) + ")"
         return rect_rep
+
+    def __del__(self):
+        """ called when an object is deleted"""
+        print("Bye rectangle...")

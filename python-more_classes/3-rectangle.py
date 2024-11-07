@@ -46,3 +46,15 @@ class Rectangle:
         if self.__height == 0 or self.__width == int(0):
             return (0)
         return ((self.__width * 2) + (self.__height * 2))
+
+    def __str__(self):
+        """ the strimg repr... of the object"""
+        if self.__width == 0 or self.__height == 0:
+            return ("")
+
+        rec_print = []
+        for i in range(self.__height):
+            [rec_print.append("#") for j in range(self.width)]
+            if i != self.height - 1:
+                rec_print.append("\n")
+        return ("".join(rec_print))

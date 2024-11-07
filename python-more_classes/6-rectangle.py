@@ -4,8 +4,11 @@
 
 class Rectangle:
     """ the rectangle class """
+    number_of_instances = 0
+
     def __init__(self, width=0, height=0):
         """ instantation of the class"""
+        self.__class__.number_of_instances += 1
         self.width = width
         self.height = height
 
@@ -67,4 +70,5 @@ class Rectangle:
 
     def __del__(self):
         """ called when an object is deleted"""
+        self.__class__.number_of_instances -= 1
         print("Bye rectangle...")

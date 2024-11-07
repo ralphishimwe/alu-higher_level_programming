@@ -58,3 +58,9 @@ class Rectangle:
             if i != self.height - 1:
                 rec_print.append("\n")
         return ("".join(rec_print))
+
+    def __repr__(self):
+        """ a string repr more of a readable format for dev"""
+        rect_rep = "Rectangle(" + str(self.__width)
+        rect_rep += ", " + str(self.__height) + ")"
+        return rect_rep
